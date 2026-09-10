@@ -1,5 +1,11 @@
 # hardcoders
-DODGE is an AI-powered road hazard intelligence system that converts dashcam footage into real-time safety alerts and road-maintenance data. Using YOLOv8, depth estimation, GPS and DBSCAN clustering, it detects, measures, prioritizes and maps potholes while removing duplicate detections. 
+DODGE is an AI-powered road hazard intelligence system that converts dashcam footage into real-time safety alerts and road-maintenance data. Using YOLOv8, depth estimation, GPS and DBSCAN clustering, it detects, measures, prioritizes and maps potholes while removing duplicate detections.
+Project Title: Dodge- Ai pothole management 
+PS ID: SIH26037
+PS Title: Adaptive Path Planning and Collision
+Avoidence for Autonomous Vehicles on Unstructured Indian Roads
+Category: Software
+Theme: Smart Vehicles
 # Real-Time Pothole Detection & GPS Impact Analysis
 
 A complete computer-vision pipeline that watches dashcam footage, finds potholes,
