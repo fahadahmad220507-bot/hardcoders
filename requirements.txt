@@ -1,0 +1,39 @@
+# ==============================================================================
+#  Real-Time Pothole Detection & GPS Impact Analysis -- dependencies
+# ==============================================================================
+#  Install everything:      pip install -r requirements.txt
+#  Minimum viable install:  pip install numpy opencv-python pandas
+# ==============================================================================
+
+# ---- REQUIRED: the pipeline will not start without these ---------------------
+numpy>=1.24.0
+opencv-python>=4.8.0
+pandas>=2.0.0
+
+# ---- STRONGLY RECOMMENDED ----------------------------------------------------
+# scikit-learn : DBSCAN spatial clustering (stage 6). Without it the raw log is
+#                still written, but no de-duplication and no map are produced.
+scikit-learn>=1.3.0
+
+# folium       : interactive HTML map (stage 7). Without it every other stage
+#                still runs and the cluster CSV is still written.
+folium>=0.14.0
+branca>=0.6.0
+
+# ---- OPTIONAL ----------------------------------------------------------------
+# ultralytics  : real YOLOv8 inference and training. Without it the pipeline
+#                automatically falls back to the deterministic SimulatedDetector.
+#                Pulls in PyTorch (~2 GB). For GPU builds install torch first
+#                from https://pytorch.org/get-started/locally/
+# ultralytics>=8.1.0
+
+# simpleaudio  : cross-platform audio alerts. Without it alerts fall back to
+#                winsound / aplay / afplay / terminal bell / silent.
+# simpleaudio>=1.0.4
+
+# ---- EXTERNAL BINARY (not a pip package) -------------------------------------
+# ffmpeg : optional. Used to re-encode output video from mp4v to H.264, which
+#          shrinks it roughly 10x and makes it playable in browsers and slides.
+#          Ubuntu : sudo apt install ffmpeg
+#          macOS  : brew install ffmpeg
+#          Windows: https://ffmpeg.org/download.html
